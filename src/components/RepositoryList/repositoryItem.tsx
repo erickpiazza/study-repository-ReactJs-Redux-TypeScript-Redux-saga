@@ -1,5 +1,5 @@
 import React from 'react';
-import { Repository } from '../../store/ducks/repositories/types';
+import { Repository } from '../../store/repositories/types';
 
 interface OwnProps{
     repository: Repository,

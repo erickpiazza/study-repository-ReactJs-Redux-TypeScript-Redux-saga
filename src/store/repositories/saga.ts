@@ -1,12 +1,12 @@
 import { call, put } from 'redux-saga/effects';
 import api from '../../services/api';
-import { loadSuccess, loadFailure } from './actions';
+import { LoadSuccesstAction, LoadFailuretAction } from './actions';
 
 export function* load() {
   try {
     const response = yield call(api.get, 'users/erickpiazza/repos');
-    yield put(loadSuccess(response.data));
+    yield put(LoadSuccesstAction(response.data));
   } catch (err) {
-    yield put(loadFailure());
+    yield put(LoadFailuretAction());
   }
 }

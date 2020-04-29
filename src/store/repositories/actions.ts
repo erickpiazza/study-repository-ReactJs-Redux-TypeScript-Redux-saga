@@ -1,8 +1,21 @@
-import { action } from 'typesafe-actions';
-import { RepositoriesTypes, Repository } from './types';
 
-export const loadRequest = () => action(RepositoriesTypes.LOAD_REQUEST);
+import { RepositoriesTypes, Repository, RepositoryctionTypes } from './types';
 
-export const loadSuccess = (data:Repository[]) => action(RepositoriesTypes.LOAD_SUCCESS, { data });
 
-export const loadFailure = () => action(RepositoriesTypes.LOAD_FAILURE);
+export function LoadSuccesstAction(data:Repository[]): RepositoryctionTypes {
+  return {
+    type: RepositoriesTypes.LOAD_SUCCESS,
+    payload: { data },
+  };
+}
+export function LoadFailuretAction(): RepositoryctionTypes {
+  return {
+    type: RepositoriesTypes.LOAD_FAILURE,
+  };
+}
+
+export function loadRequestAction(): RepositoryctionTypes {
+  return {
+    type: RepositoriesTypes.LOAD_REQUEST,
+  };
+}

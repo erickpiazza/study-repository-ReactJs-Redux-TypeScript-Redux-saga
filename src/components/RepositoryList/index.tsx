@@ -3,12 +3,10 @@ import { connect, useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
 
-import { Repository, RepositoriesTypes } from '../../store/repositories/types';
-
-import * as RepositoriesActions from '../../store/repositories/actions';
-
-import RepositoryItem from './repositoryItem';
 import { ApplicationState } from '../../store/store';
+import * as RepositoriesActions from '../../store/repositories/actions';
+import { Repository, RepositoriesTypes } from '../../store/repositories/types';
+import RepositoryItem from './repositoryItem';
 
 
 interface StateProps{

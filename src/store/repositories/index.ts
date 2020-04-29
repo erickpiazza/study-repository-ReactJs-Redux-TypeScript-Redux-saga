@@ -7,7 +7,7 @@ const INITIAL_STATE: RepositoriesState = {
   loading: false,
 };
 
-const repositoriesReducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case RepositoriesTypes.LOAD_REQUEST:
       return { ...state, loading: true };
@@ -24,4 +24,4 @@ const repositoriesReducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, 
   }
 };
 
-export default repositoriesReducer;
+export default reducer;

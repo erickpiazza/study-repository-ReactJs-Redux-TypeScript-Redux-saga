@@ -5,7 +5,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 
 import { ApplicationState } from '../../store/store';
 import * as RepositoriesActions from '../../store/repositories/actions';
-import { Repository, LOAD_REQUEST_ACTION, RepositoryctionTypes } from '../../store/repositories/types';
+import { Repository, LOAD_REQUEST_ACTION } from '../../store/repositories/types';
 import RepositoryItem from './repositoryItem';
 
 

@@ -5,7 +5,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 
 import { ApplicationState } from '../../store/store';
 import * as RepositoriesActions from '../../store/repositories/actions';
-import { Repository, RepositoriesTypes } from '../../store/repositories/types';
+import { Repository, LOAD_REQUEST_ACTION, RepositoryctionTypes } from '../../store/repositories/types';
 import RepositoryItem from './repositoryItem';
 
 
@@ -24,7 +24,7 @@ function RepositoryList() {
 
 
   function conectRepository() {
-    dispatch({ type: RepositoriesTypes.LOAD_REQUEST });
+    dispatch({ type: LOAD_REQUEST_ACTION });
   }
 
   return (

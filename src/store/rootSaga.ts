@@ -1,9 +1,9 @@
 import { all, takeLatest } from 'redux-saga/effects';
-import { RepositoriesTypes } from './repositories/types';
+import { LOAD_REQUEST_ACTION } from './repositories/types';
 import { load } from './repositories/saga';
 
 export default function* rootSaga() {
   return yield all([
-    takeLatest(RepositoriesTypes.LOAD_REQUEST, load),
+    takeLatest(LOAD_REQUEST_ACTION, load),
   ]);
 }

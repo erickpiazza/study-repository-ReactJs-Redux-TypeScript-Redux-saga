@@ -1,5 +1,9 @@
 import { Reducer } from 'redux';
-import { RepositoriesState, RepositoriesTypes } from './types';
+import {
+  RepositoriesState, RepositoryctionTypes,
+  LOAD_FAILURE_ACTION, LOAD_REQUEST_ACTION,
+  LOAD_SUCCESS_ACTION,
+} from './types';
 
 const INITIAL_STATE: RepositoriesState = {
   data: [{ id: 1, name: 'teste' }],
@@ -7,15 +11,16 @@ const INITIAL_STATE: RepositoriesState = {
   loading: false,
 };
 
-const reducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<RepositoriesState> = (state = INITIAL_STATE,
+  action: RepositoryctionTypes) => {
   switch (action.type) {
-    case RepositoriesTypes.LOAD_REQUEST:
+    case LOAD_REQUEST_ACTION:
       return { ...state, loading: true };
-    case RepositoriesTypes.LOAD_SUCCESS:
+    case LOAD_SUCCESS_ACTION:
       return {
         ...state, loading: false, error: false, data: action.payload.data,
       };
-    case RepositoriesTypes.LOAD_FAILURE:
+    case LOAD_FAILURE_ACTION:
       return {
         ...state, loading: false, error: true, data: [],
       };

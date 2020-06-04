@@ -22,7 +22,7 @@ export default function RepositoryList() {
         {repositories.data.map((repo, index) => <RepositoryItem key={repo.id} repository={repo} />)}
 
       </ul>
-      <button type="button" onClick={conectRepository}> connect repository</button>
+      <button type="button" onClick={conectRepository}> connecteeee repository</button>
     </div>
 
   );

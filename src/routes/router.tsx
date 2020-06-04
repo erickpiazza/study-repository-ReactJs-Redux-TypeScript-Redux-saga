@@ -4,15 +4,16 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import Repository from '../pages/repository/repository';
+
 import Login from '../pages/login/login';
+import RepositoryList from '../pages/repository/repository';
 
 export default function Routes() {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/repository" component={Repository} />
+        <Route path="/" exact component={RepositoryList} />
+
       </Switch>
     </Router>
 
